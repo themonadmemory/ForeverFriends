@@ -13,7 +13,7 @@
             font-family: 'Verdana', Geneva, Tahoma, sans-serif;
             text-align: center;
             margin: 50px;
-            background-color: #f5f5f5; /* Light Gray Background */
+            background-color: #fce4ec; /* Light Pink Background */
             color: #333; /* Dark Gray Text Color */
         }
 
@@ -40,7 +40,7 @@
 
         .right-column {
             padding: 20px;
-            background-color: #fff; /* White Background */
+            background-color: #ffb6c1; /* Light Pink Background */
             border-radius: 10px; /* Rounded Corners */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light Shadow */
         }
@@ -63,7 +63,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            background-color: #333; /* Dark Gray Button Background */
+            background-color: #ff69b4; /* Pink Button Background */
             color: #fff; /* White Button Text Color */
         }
 
@@ -131,14 +131,14 @@
             const memoryText = document.getElementById('memory-text').value;
             const memoryDate = document.getElementById('memory-date').value;
 
-            // Send memory via email
+            // Send the memory via email
             emailjs.send("service_f48v2un", "template_dayc6cu", {
                 text: memoryText,
                 date: memoryDate
             }).then(response => {
                 console.log("Email sent successfully:", response);
 
-                // Display memory locally
+                // Display the memory locally
                 const newMemoryElement = document.createElement('li');
                 newMemoryElement.textContent = `On ${memoryDate}, someone shared: "${memoryText}"`;
                 document.getElementById('display-area').appendChild(newMemoryElement);
