@@ -24,4 +24,12 @@ Forever Friends was created to provide a respectful and supportive space for pet
 
 Thank you for being a part of Forever Friends, where memories live on, and the love for our furry friends lasts forever.
 
-Note: Forever Friends is a static web page example, and messages are not actually saved or shared. The purpose is to provide a concept for creating a supportive community for pet owners.
+Privacy and Respect
+
+We understand the sensitivity of the moments you share. No identification is required, and the forms are anonymous to preserve everyone's memory. Your privacy is our priority, allowing each individual to express themselves freely and remember without reservation.
+
+Feel free to let me know if you have any more specific ideas or adjustments you'd like to make!
+
+The Monad
+
+https://twitter.com/Crash_113589311
