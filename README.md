@@ -1,13 +1,16 @@
-Forever Friends
+<h3>Forever Friends</h3>
 
 Welcome to Forever Friends, a space dedicated to sharing heartfelt messages and memories for our beloved furry companions. Losing a pet is a profound experience, and this platform is here for you to express your feelings and connect with others who understand the depth of such loss.
 
 Share Your Message
 
 How it Works
+
 Write Your Message: Pour your emotions into words. Share memories, express your love, or simply leave a heartfelt note.
+
 Choose a Date: Select a significant date associated with your message.
 Save Your Message: Click the "Save Message" button to preserve your words.
+
 Messages Shared
 
 Explore and connect with messages shared by others who have also experienced the bond with their furry friends.
