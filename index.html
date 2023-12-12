@@ -58,6 +58,13 @@
         li {
             margin: 10px 0;
         }
+
+        /* Ajout de styles pour les écrans étroits (mobiles) */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Une seule colonne sur les écrans étroits */
+            }
+        }
     </style>
 </head>
 <body>
@@ -66,7 +73,6 @@
             <h1>Forever Friends</h1>
             <p>Share a last message to our furry friends.</p>
             <img src="https://i.ibb.co/G2rh1bB/IMG-6332.jpg" alt="Forever Friends S Image" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
-            <li> S </li>
         </div>
         <div class="right-column">
             <h2 id="write">Write Your Message</h2>
