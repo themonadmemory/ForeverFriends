@@ -9,16 +9,30 @@
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
             margin: 50px;
-            background-color: #9766B466; /* Couleur mauve  */
-            color: #000000; /* Couleur noire  */
+            background-color: #9766B466;
+            color: #000000;
         }
 
         h1, h2 {
-            color: #000000; /* Couleur noire */
+            color: #000000;
         }
 
         p {
-            color: #000000; /* Couleur noire */
+            color: #000000;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Deux colonnes de largeur égale */
+            grid-gap: 20px; /* Espace entre les colonnes */
+        }
+
+        .left-column {
+            padding: 20px;
+        }
+
+        .right-column {
+            padding: 20px;
         }
 
         textarea {
@@ -33,6 +47,7 @@
             margin: 10px 0;
             padding: 5px;
             border-radius: 5px;
+            width: calc(100% - 10px); /* La largeur du formulaire prend 100% moins 10px de marge */
         }
 
         ul {
@@ -43,40 +58,36 @@
         li {
             margin: 10px 0;
         }
-
-   
-        
     </style>
 </head>
 <body>
     <div class="container">
-        
-        <h1>Forever Friends</h1>
-        <p>Share a last message to our flurry friends.</p>
+        <div class="left-column">
+            <h1>Forever Friends</h1>
+            <p>Share a last message to our furry friends.</p>
+            <img src="https://i.ibb.co/G2rh1bB/IMG-6332.jpg" alt="Forever Friends S Image" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+            <li>S</li>
+        </div>
+        <div class="right-column">
+            <h2 id="write">Write Your Message</h2>
+            <textarea id="memory-text" placeholder="Share your memory (max 240 characters)" maxlength="240" required></textarea>
+            <br>
+            <label for="memory-date">Choose a Date:</label>
+            <input type="date" id="memory-date" required>
+            <br>
+            <button onclick="saveMemory()">Save Message</button>
 
-        <img src="https://i.ibb.co/G2rh1bB/IMG-6332.jpg" alt="Forever Friends S Image" style="width: 25%; border-radius: 10px; margin-bottom: 20px;">
+            <h2>Message Shared</h2>
+            <ul id="display-area">
+                <!-- Ajoutez manuellement des éléments li ici si nécessaire -->
+                <li>Please be patient, each message is being added manually.</li>
+                <li>---</li>
+                <li>--- TO OUR BELOVED ---</li>
+                <li>---</li>
 
-        <h2 id="write">Write Your Message</h2>
-        <textarea id="memory-text" placeholder="Share your memory (max 240 characters)" maxlength="240" required></textarea>
-        <br>
-        <label for="memory-date">Choose a Date:</label>
-        <input type="date" id="memory-date" required>
-        <br>
-        <button onclick="saveMemory()">Save Message</button>
-
-        <h2>Message Shared</h2>
-        <ul id="display-area">
-            <!-- Ajoutez manuellement des éléments li ici si nécessaire -->
-            <li>Please be patient, each message is being added manually.</li>
-            <li>   ---                ---   </li>
-            <li>   --- TO OUR BELOVED ---   </li>
-            <li>   ---                ---   </li>
-            
-            <li>On 2023-12-12, someone shared: "I'm dying inside. My Black Cat "S" is gone."</li>
-           
-
-            
-        </ul>
+                <li>On 2023-12-12, someone shared: "I'm dying inside. My Black Cat 'S' is gone."</li>
+            </ul>
+        </div>
     </div>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
@@ -108,11 +119,8 @@
         }
     </script>
 
-<!-- Ajoutez ces lignes à la fin de la balise <body> -->
-<div style="text-align: center; margin-top: 30px; font-weight: bold;">
-    <a href="README.md" target="_blank">Read the README</a>
-</div>
-
-    
+    <div style="text-align: center; margin-top: 30px; font-weight: bold;">
+        <a href="README.md" target="_blank">Read the README</a>
+    </div>
 </body>
 </html>
