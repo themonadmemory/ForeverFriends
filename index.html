@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forever Friends</title>
 
     <link rel="icon" href="https://i.ibb.co/56kPFWC/temp-Image7xkgo-H.jpg" type="image/x-icon">
-    
+
     <style>
         body {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Verdana', Geneva, Tahoma, sans-serif;
             text-align: center;
             margin: 50px;
-            background-color: #9766B466;
-            color: #000000;
+            background-color: #f5f5f5; /* Light Gray Background */
+            color: #333; /* Dark Gray Text Color */
         }
 
         h1, h2 {
-            color: #000000;
+            color: #333; /* Dark Gray Heading Color */
         }
 
         p {
-            color: #000000;
+            color: #666; /* Medium Gray Paragraph Color */
         }
 
         .container {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Deux colonnes de largeur égale */
-            grid-gap: 20px; /* Espace entre les colonnes */
+            grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+            grid-gap: 20px; /* Gap between columns */
         }
 
         .left-column {
             padding: 20px;
+            background-color: #fff; /* White Background */
+            border-radius: 10px; /* Rounded Corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light Shadow */
         }
 
         .right-column {
             padding: 20px;
+            background-color: #fff; /* White Background */
+            border-radius: 10px; /* Rounded Corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light Shadow */
         }
 
         textarea {
             width: 100%;
             height: 100px;
             margin-bottom: 10px;
-            padding: 5px;
+            padding: 10px; /* Increased Padding */
+            border: 1px solid #ddd; /* Light Gray Border */
             border-radius: 5px;
+            resize: none; /* Disable Textarea Resize */
         }
 
-        input[type="date"], input[type="submit"] {
+        input[type="date"],
+        input[type="submit"],
+        button {
             margin: 10px 0;
-            padding: 5px;
+            padding: 10px; /* Increased Padding */
+            border: none;
             border-radius: 5px;
-            width: calc(100% - 10px); /* La largeur du formulaire prend 100% moins 10px de marge */
+            cursor: pointer;
+            background-color: #333; /* Dark Gray Button Background */
+            color: #fff; /* White Button Text Color */
         }
 
         ul {
@@ -60,16 +74,27 @@
 
         li {
             margin: 10px 0;
+            border-bottom: 1px solid #ddd; /* Light Gray Bottom Border */
+            padding-bottom: 10px; /* Added Padding at the Bottom */
         }
 
-        /* Ajout de styles pour les écrans étroits (mobiles) */
+        /* Styles for narrow screens (mobile) */
         @media (max-width: 768px) {
             .container {
-                grid-template-columns: 1fr; /* Une seule colonne sur les écrans étroits */
+                grid-template-columns: 1fr; /* Single column on narrow screens */
             }
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-weight: bold;
+            color: #777; /* Gray Footer Text Color */
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="left-column">
@@ -88,12 +113,11 @@
 
             <h2>Message Shared</h2>
             <ul id="display-area">
-                <!-- Ajoutez manuellement des éléments li ici si nécessaire -->
+                <!-- Manually add li elements here if needed -->
                 <li>Please be patient, each message is being added manually.</li>
                 <li>---</li>
                 <li>--- TO OUR BELOVED ---</li>
                 <li>---</li>
-
                 <li>On 2023-12-12, someone shared: "I'm dying inside. My Black Cat 'S' is gone."</li>
             </ul>
         </div>
@@ -107,29 +131,28 @@
             const memoryText = document.getElementById('memory-text').value;
             const memoryDate = document.getElementById('memory-date').value;
 
-            // Envoyer le mémoire par e-mail
+            // Send memory via email
             emailjs.send("service_f48v2un", "template_dayc6cu", {
                 text: memoryText,
                 date: memoryDate
             }).then(response => {
-                console.log("E-mail envoyé avec succès:", response);
+                console.log("Email sent successfully:", response);
 
-                // Afficher le mémoire localement
+                // Display memory locally
                 const newMemoryElement = document.createElement('li');
                 newMemoryElement.textContent = `On ${memoryDate}, someone shared: "${memoryText}"`;
                 document.getElementById('display-area').appendChild(newMemoryElement);
 
-                // Effacer le formulaire
+                // Clear the form
                 document.getElementById('memory-text').value = '';
                 document.getElementById('memory-date').value = '';
             }).catch(error => {
-                console.error("Erreur lors de l'envoi de l'e-mail:", error);
+                console.error("Error sending email:", error);
             });
         }
     </script>
 
-    <div style="text-align: center; margin-top: 30px; font-weight: bold;">
-        <a href="README.md" target="_blank">Read the README</a>
-    </div>
+    <footer>&copy; 2023 Forever Friends</footer>
 </body>
+
 </html>
